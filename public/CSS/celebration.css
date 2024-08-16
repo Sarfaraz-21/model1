@@ -1,0 +1,63 @@
+/* Celebration Page Styles */
+.celebration-container {
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.celebration-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.celebration-container p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.home-button:hover {
+    background-color: #4cae4c;
+}
+
+/* Confetti Effect */
+.confetti {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff0;
+    opacity: 0.7;
+    transform: rotate(45deg);
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
