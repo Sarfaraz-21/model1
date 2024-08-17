@@ -2,7 +2,9 @@ const mongoose = require("mongoose");
 
 const databaseUrl = "mongodb://localhost:27017/model1";
 
-mongoose.connect(databaseUrl)
+mongoose.connect(databaseUrl,{
+
+})
 
 .then(()=> console.log("mongoDb connected"))
 .catch(err => console.error("mongoDb connection error:",err)
