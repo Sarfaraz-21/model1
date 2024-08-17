@@ -41,31 +41,5 @@ const loginRoute = require("./routes/login");
 app.use("/form",formRoute);
 app.use("/login",loginRoute);
 
-// app.get("/",(req,res)=>{
-//   try{
-//       res.render("login");
-//   }catch(err){
-//       console.log(err);
-//       res.status(500).json({error: "Internal server error"});
-//   }
-// });
-
-// app.get("/form",(req,res)=>{
-//   try{
-//       res.render("form");
-//   }catch(err){
-//       res.status(500).json({error: "Internal server error"});
-//       console.log(err);
-//   }
-// });
-
-// app.get("/celebration",(req,res)=>{
-//   try{
-//     res.render("celebration")
-//   }catch(err){
-//     console.log(err);
-//     res.status(500).json({error: "Internal server error"})
-//   }
-// })
 
 app.listen(port,()=>console.log(`App is listening on port: ${port}`));
