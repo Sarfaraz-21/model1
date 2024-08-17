@@ -12,7 +12,7 @@ router.get("/",(req,res)=>{
 });
 
 // Route to handle registration form submission
-router.get('/', async (req, res) => {
+router.post("/celebration", async (req, res) => {
     const { name, age, email, mobileNumber, Address, experience, uniqueId, jobRole } = req.body;
 
     try {
