@@ -4,8 +4,6 @@ const db = require("./db");
 const bodyParser = require("body-parser");
 const path = require("path");
 const { error } = require("console");
-// Updated port
-const port = 3000;
 
 // Middleware
 app.set("view engine","ejs");
@@ -37,9 +35,12 @@ app.get("/celebration",(req,res)=>{
 // Import router
 const formRoute = require("./routes/formRoute");
 const loginRoute = require("./routes/login");
+const settingsRoute = require("./routes/settings")
 // Use  router
 app.use("/form",formRoute);
 app.use("/login",loginRoute);
+app.use("/settings",settingsRoute);
 
-
+//Port
+const port = 3000;
 app.listen(port,()=>console.log(`App is listening on port: ${port}`));
